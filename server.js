@@ -11,10 +11,10 @@ const PORT = process.env.PORT || 3000;
 // 管理员密码：改成你自己的；也可用环境变量 ADMIN_PASSWORD 覆盖
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || '123456';
 
-// 上传目录
-const uploadsDir = path.join(__dirname, 'uploads');
-if (!fs.existsSync(uploadsDir)) {
-  fs.mkdirSync(uploadsDir, { recursive: true });
+// 图片目录：放在 public/images 里，push 后能随 GitHub Pages 一起上线
+const imagesDir = path.join(__dirname, 'public', 'images');
+if (!fs.existsSync(imagesDir)) {
+  fs.mkdirSync(imagesDir, { recursive: true });
 }
 
 // 登录 token（保存在内存里，重启服务器会失效，需重新登录）
@@ -22,11 +22,10 @@ let adminToken = null;
 
 app.use(express.json({ limit: '5mb' }));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/uploads', express.static(uploadsDir));
 
 // 图片上传配置
 const storage = multer.diskStorage({
-  destination: uploadsDir,
+  destination: imagesDir,
   filename: function (req, file, cb) {
     const ext = path.extname(file.originalname).toLowerCase();
     cb(null, Date.now() + '-' + Math.round(Math.random() * 1e9) + ext);
@@ -84,7 +83,7 @@ app.post('/api/upload', requireAuth, upload.single('file'), function (req, res) 
   if (!req.file) {
     return res.status(400).json({ error: '没有收到文件' });
   }
-  res.json({ url: '/uploads/' + req.file.filename });
+  res.json({ url: 'images/' + req.file.filename });
 });
 
 app.listen(PORT, function () {
