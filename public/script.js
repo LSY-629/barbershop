@@ -14,7 +14,16 @@ function openBarber(b) {
   modalBody.innerHTML = '';
 
   const head = createEl('div', 'modal-head');
-  head.appendChild(createEl('div', 'modal-avatar', b.name.charAt(0)));
+  const modalAvatar = createEl('div', 'modal-avatar');
+  if (b.photo) {
+    const img = createEl('img');
+    img.src = b.photo;
+    img.alt = b.name;
+    modalAvatar.appendChild(img);
+  } else {
+    modalAvatar.textContent = b.name.charAt(0);
+  }
+  head.appendChild(modalAvatar);
   const headInfo = createEl('div', 'modal-head-info');
   headInfo.appendChild(createEl('div', 'modal-name', b.name + ' · ' + b.title));
   headInfo.appendChild(createEl('div', 'modal-years', b.years + '年经验'));
@@ -121,7 +130,16 @@ function render(site) {
   const barberList = document.getElementById('barber-list');
   barbers.forEach(function (b) {
     const card = createEl('div', 'barber-card');
-    card.appendChild(createEl('div', 'avatar', b.name.charAt(0)));
+    const avatar = createEl('div', 'avatar');
+    if (b.photo) {
+      const img = createEl('img');
+      img.src = b.photo;
+      img.alt = b.name;
+      avatar.appendChild(img);
+    } else {
+      avatar.textContent = b.name.charAt(0);
+    }
+    card.appendChild(avatar);
 
     const info = createEl('div', 'info');
     const nameRow = createEl('div', 'name-row');

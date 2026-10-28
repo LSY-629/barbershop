@@ -200,6 +200,7 @@ function renderBarbers() {
     field(card, '经验(年)', function () { return b.years; }, function (v) { b.years = Number(v) || 0; });
     field(card, '起步价', function () { return b.priceFrom; }, function (v) { b.priceFrom = Number(v) || 0; });
     field(card, '电话', function () { return b.phone; }, function (v) { b.phone = v; });
+    imageField(card, '本人照片', function () { return b.photo; }, function (v) { b.photo = v; });
     field(card, '标签(逗号分隔)', function () { return b.tags.join(','); }, function (v) { b.tags = v.split(',').map(function (s) { return s.trim(); }).filter(Boolean); });
     field(card, '简介', function () { return b.desc; }, function (v) { b.desc = v; });
 
@@ -242,7 +243,7 @@ function renderBarbers() {
   addBtn(sec, '+ 添加理发师', function () {
     site.barbers.push({
       id: Date.now(), name: '', title: '', years: 0, tags: [], priceFrom: 0,
-      desc: '', phone: '', priceList: [], works: [],
+      desc: '', phone: '', photo: '', priceList: [], works: [],
     });
     renderEditor();
   });
