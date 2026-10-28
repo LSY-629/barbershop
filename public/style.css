@@ -1,0 +1,558 @@
+:root {
+  --brand: #b8860b;
+  --brand-light: #c8a15a;
+  --bg: #f6f4f1;
+  --card: #ffffff;
+  --text: #2b2b2b;
+  --muted: #777777;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* 顶部导航 */
+.nav {
+  position: sticky;
+  top: 0;
+  background: #2b2b2b;
+  color: #ffffff;
+  z-index: 10;
+}
+.nav-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.links a {
+  color: #cccccc;
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 14px;
+}
+.links a:hover {
+  color: var(--brand-light);
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px 60px;
+}
+
+/* 招牌 */
+.hero {
+  background: linear-gradient(135deg, #2b2b2b, #3d3d3d);
+  color: #f5f0e8;
+  border-radius: 16px;
+  padding: 56px 28px;
+  margin: 20px 0 36px;
+  text-align: center;
+}
+.hero-name {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0;
+}
+.hero-slogan {
+  color: var(--brand-light);
+  margin: 10px 0 0;
+}
+.hero-hours {
+  color: #cccccc;
+  font-size: 14px;
+  margin: 20px 0 0;
+}
+
+/* 顶部滚动展示图 */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  margin: 0 0 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.carousel-slide {
+  min-width: 100%;
+  height: 240px;
+  position: relative;
+  background: linear-gradient(135deg, #e8e2d8, #d9d2c6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slide-emoji {
+  font-size: 72px;
+}
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 16px 14px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.55));
+  color: #ffffff;
+  font-size: 15px;
+  text-align: center;
+}
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 36px;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d5cfc4;
+  cursor: pointer;
+}
+.dot-active {
+  background: var(--brand);
+}
+
+.section {
+  margin-bottom: 40px;
+}
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  border-left: 4px solid var(--brand);
+  padding-left: 12px;
+  margin: 0 0 16px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+}
+.card-title {
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* 服务项目 */
+.service-card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 4px 20px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+}
+.service-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0ede8;
+}
+.service-row:last-child {
+  border-bottom: none;
+}
+.service-name {
+  font-weight: 600;
+}
+.service-note {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 2px;
+}
+.service-price {
+  color: var(--brand);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* 理发师 */
+.barber-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.barber-card {
+  display: flex;
+  background: var(--card);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+}
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-light), var(--brand));
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.info {
+  margin-left: 16px;
+}
+.name-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.name {
+  font-weight: 700;
+  font-size: 18px;
+}
+.title {
+  color: var(--brand);
+  font-size: 14px;
+}
+.tags {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tag {
+  font-size: 12px;
+  color: #7a6a4f;
+  background: #f5efe4;
+  border-radius: 6px;
+  padding: 2px 10px;
+}
+.desc {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.price {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* 营业时间 */
+.hours {
+  font-weight: 600;
+  font-size: 17px;
+}
+.closed {
+  color: #c0392b;
+  font-size: 14px;
+  margin-top: 4px;
+}
+.shift {
+  display: flex;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0ede8;
+}
+.shift:last-child {
+  border-bottom: none;
+}
+.shift-name {
+  width: 80px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.shift-detail {
+  color: var(--muted);
+  font-size: 14px;
+}
+.row {
+  padding: 6px 0;
+  font-size: 15px;
+}
+
+/* 图库 */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 8px;
+  background: var(--card);
+  color: #666666;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
+}
+.tab-active {
+  background: var(--brand);
+  color: #ffffff;
+  font-weight: 600;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+@media (min-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.thumb {
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e8e2d8, #d9d2c6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.emoji {
+  font-size: 44px;
+}
+.cat {
+  color: #999999;
+  font-size: 12px;
+  margin-top: 6px;
+}
+.gallery-title {
+  margin-top: 8px;
+  color: #555555;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  color: #999999;
+  font-size: 13px;
+  padding: 24px 16px;
+  background: #ffffff;
+  border-top: 1px solid #f0ede8;
+}
+
+/* 理发师卡片可点击 */
+.barber-card {
+  cursor: pointer;
+}
+.barber-card:active {
+  background: #faf8f4;
+}
+.info {
+  flex: 1;
+}
+.barber-chevron {
+  align-self: center;
+  color: #cccccc;
+  font-size: 24px;
+  margin-left: 8px;
+}
+
+/* 理发师详情弹窗 */
+.modal-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 100;
+}
+.modal-mask.show {
+  display: flex;
+}
+.modal-card {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 24px;
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: none;
+  font-size: 28px;
+  color: #999999;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+}
+.modal-head {
+  display: flex;
+  align-items: center;
+}
+.modal-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-light), var(--brand));
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.modal-head-info {
+  margin-left: 14px;
+}
+.modal-name {
+  font-weight: 700;
+  font-size: 20px;
+}
+.modal-years {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 2px;
+}
+.modal-desc {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.modal-phone {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--brand);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 15px;
+}
+.modal-section-title {
+  font-weight: 700;
+  margin: 22px 0 10px;
+  font-size: 15px;
+  border-left: 3px solid var(--brand);
+  padding-left: 10px;
+}
+.modal-price-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-bottom: 1px solid #f0ede8;
+  font-size: 14px;
+}
+.modal-price-row:last-child {
+  border-bottom: none;
+}
+.modal-price {
+  color: var(--brand);
+  font-weight: 600;
+}
+.modal-works {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.modal-work-thumb {
+  height: 90px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #e8e2d8, #d9d2c6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.modal-work-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.modal-work-thumb .emoji {
+  font-size: 30px;
+}
+.modal-work-title {
+  font-size: 12px;
+  color: #555555;
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* 手机端排版优化 */
+@media (max-width: 480px) {
+  main {
+    padding: 0 12px 48px;
+  }
+  .hero {
+    padding: 40px 20px;
+    margin: 12px 0 24px;
+  }
+  .hero-name {
+    font-size: 32px;
+  }
+  .nav-inner {
+    padding: 12px 14px;
+  }
+  .links a {
+    margin-left: 12px;
+    font-size: 13px;
+  }
+  .carousel-slide {
+    height: 200px;
+  }
+  .barber-card {
+    padding: 16px;
+  }
+  .avatar {
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
+  }
+  .gallery-grid {
+    gap: 12px;
+  }
+  .thumb {
+    height: 180px;
+  }
+}

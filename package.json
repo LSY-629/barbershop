@@ -1,0 +1,13 @@
+{
+  "name": "barbershop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "理发店网站（前台 + 自建后端 + 后台管理）",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^2.5.0"
+  }
+}

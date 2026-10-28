@@ -1,0 +1,14 @@
+{
+  "compileType": "miniprogram",
+  "appid": "touristappid",
+  "projectname": "理发店项目",
+  "setting": {
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "urlCheck": false
+  },
+  "packOptions": {
+    "ignore": []
+  }
+}

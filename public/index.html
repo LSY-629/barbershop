@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>理发店</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top">店名</a>
+      <nav class="links">
+        <a href="#services">服务</a>
+        <a href="#barbers">理发师</a>
+        <a href="#schedule">时间</a>
+        <a href="#gallery">作品</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="top" class="hero">
+      <h1 class="hero-name">店名</h1>
+      <p class="hero-slogan">口号</p>
+      <p class="hero-hours">营业时间</p>
+    </section>
+
+    <!-- 滚动展示图 -->
+    <div class="carousel" id="carousel">
+      <div class="carousel-track" id="carousel-track"></div>
+    </div>
+    <div class="carousel-dots" id="carousel-dots"></div>
+
+    <section id="services" class="section">
+      <h2 class="section-title">服务项目</h2>
+      <div class="service-card" id="service-list"></div>
+    </section>
+
+    <section id="barbers" class="section">
+      <h2 class="section-title">理发师</h2>
+      <div class="barber-list" id="barber-list"></div>
+    </section>
+
+    <section id="schedule" class="section">
+      <h2 class="section-title">营业时间</h2>
+      <div id="schedule-box"></div>
+    </section>
+
+    <section id="gallery" class="section">
+      <h2 class="section-title">作品图库</h2>
+      <div class="tabs" id="gallery-tabs"></div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p id="footer-info"></p>
+  </footer>
+
+  <!-- 理发师详情弹窗 -->
+  <div class="modal-mask" id="modal">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close" aria-label="关闭">×</button>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

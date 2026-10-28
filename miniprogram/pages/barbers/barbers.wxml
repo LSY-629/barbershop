@@ -1,0 +1,16 @@
+<view class="page">
+  <view class="card barber-card" wx:for="{{barbers}}" wx:key="id">
+    <view class="avatar">{{item.initial}}</view>
+    <view class="info">
+      <view class="name-row">
+        <text class="name">{{item.name}}</text>
+        <text class="title">{{item.title}}</text>
+      </view>
+      <view class="tags">
+        <text class="tag" wx:for="{{item.tags}}" wx:for-item="tag" wx:key="*this">{{tag}}</text>
+      </view>
+      <view class="desc">{{item.desc}}</view>
+      <view class="price">¥{{item.priceFrom}}起 · {{item.years}}年经验</view>
+    </view>
+  </view>
+</view>

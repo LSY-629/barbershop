@@ -1,0 +1,45 @@
+.card-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+  border-left: 6rpx solid #b8860b;
+  padding-left: 16rpx;
+}
+.hours {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.closed {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #c0392b;
+}
+.shift {
+  display: flex;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #f0ede8;
+}
+.shift:last-child {
+  border-bottom: none;
+}
+.shift-name {
+  width: 140rpx;
+  font-weight: 600;
+  font-size: 28rpx;
+  flex-shrink: 0;
+}
+.shift-detail {
+  flex: 1;
+  color: #777777;
+  font-size: 24rpx;
+}
+.row {
+  display: flex;
+  padding: 10rpx 0;
+  font-size: 26rpx;
+}
+.label {
+  width: 100rpx;
+  color: #999999;
+  flex-shrink: 0;
+}

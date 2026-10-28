@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/barbers/barbers",
+    "pages/schedule/schedule",
+    "pages/gallery/gallery"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#2b2b2b",
+    "navigationBarTitleText": "剪约造型",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f6f4f1"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#b8860b",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "首页" },
+      { "pagePath": "pages/barbers/barbers", "text": "理发师" },
+      { "pagePath": "pages/schedule/schedule", "text": "时间" },
+      { "pagePath": "pages/gallery/gallery", "text": "作品" }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
