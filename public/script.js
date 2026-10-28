@@ -41,9 +41,10 @@ function openBarber(b) {
     const item = createEl('div', 'modal-work');
     const thumb = createEl('div', 'modal-work-thumb');
     if (w.image) {
-      const img = createEl('img');
+      const img = createEl('img', 'clickable');
       img.src = w.image;
       img.alt = w.title || '';
+      img.addEventListener('click', function () { openLightbox(w.image); });
       thumb.appendChild(img);
     } else {
       thumb.appendChild(createEl('div', 'emoji', '💇'));
@@ -62,6 +63,28 @@ document.getElementById('modal-close').addEventListener('click', function () {
 });
 modal.addEventListener('click', function (e) {
   if (e.target === modal) modal.classList.remove('show');
+});
+
+// ---------- 图片放大查看 ----------
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+function openLightbox(src) {
+  if (!src) return;
+  lightboxImg.src = src;
+  lightbox.classList.add('show');
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('show');
+}
+
+document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', function (e) {
+  if (e.target === lightbox) closeLightbox();
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closeLightbox();
 });
 
 // ---------- 主渲染 ----------
@@ -165,9 +188,10 @@ function render(site) {
       const card = createEl('div', 'gallery-card');
       const thumb = createEl('div', 'thumb');
       if (g.image) {
-        const img = createEl('img');
+        const img = createEl('img', 'clickable');
         img.src = g.image;
         img.alt = g.title;
+        img.addEventListener('click', function () { openLightbox(g.image); });
         thumb.appendChild(img);
       } else {
         thumb.appendChild(createEl('div', 'emoji', '💇'));
@@ -208,9 +232,10 @@ function render(site) {
   slides.forEach(function (s, i) {
     const slide = createEl('div', 'carousel-slide');
     if (s.image) {
-      const img = createEl('img');
+      const img = createEl('img', 'clickable');
       img.src = s.image;
       img.alt = s.title || '';
+      img.addEventListener('click', function () { openLightbox(s.image); });
       slide.appendChild(img);
     } else {
       slide.appendChild(createEl('div', 'slide-emoji', '💇'));
