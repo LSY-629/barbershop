@@ -1,6 +1,6 @@
 {
   "shop": {
-    "name": "aaa",
+    "name": "沙宣造型",
     "slogan": "懂你的发型，更懂你",
     "phone": "138-0000-0000",
     "address": "XX市XX区XX路88号",
@@ -224,13 +224,13 @@
     {
       "image": "images/1793196974224-381439641.jpg",
       "title": "推荐洗发水",
-      "color": "#ffffff",
+      "color": "#000000",
       "font": ""
     },
     {
       "image": "images/1793196988945-402154682.jpg",
       "title": "恭喜阿全老师获冠军",
-      "color": "#ffffff",
+      "color": "#b87575",
       "font": ""
     },
     {
