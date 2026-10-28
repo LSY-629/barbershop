@@ -250,7 +250,7 @@ function render(site) {
   }
 }
 
-fetch('/api/site')
+fetch('data.json')
   .then(function (r) { return r.json(); })
   .then(render)
   .catch(function (err) {
