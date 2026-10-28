@@ -36,7 +36,7 @@
   "barbers": [
     {
       "id": 1,
-      "name": "阿杰",
+      "name": "阿全",
       "title": "首席发型师",
       "years": 8,
       "tags": [
@@ -47,7 +47,6 @@
       "priceFrom": 88,
       "desc": "擅长日系剪裁与男士油头，注重细节与头型比例。",
       "phone": "138-0000-0001",
-      "photo": "",
       "priceList": [
         {
           "name": "剪发（洗剪吹）",
@@ -64,22 +63,23 @@
       ],
       "works": [
         {
-          "image": "images/1793195398455-827715610.jpg",
+          "image": "images/1793196890539-541738872.jpg",
           "title": "日系短发"
         },
         {
-          "image": "",
-          "title": "男士油头"
+          "image": "images/1793196897142-35288193.jpg",
+          "title": "棕色"
         },
         {
-          "image": "",
+          "image": "images/1793196904571-202044331.jpg",
           "title": "层次造型"
         }
-      ]
+      ],
+      "photo": "images/1793196881432-318554456.jpg"
     },
     {
       "id": 2,
-      "name": "小林",
+      "name": "周洁",
       "title": "资深发型师",
       "years": 5,
       "tags": [
@@ -90,7 +90,6 @@
       "priceFrom": 68,
       "desc": "专注韩式烫染，擅长根据肤色推荐发色。",
       "phone": "138-0000-0002",
-      "photo": "",
       "priceList": [
         {
           "name": "剪发（洗剪吹）",
@@ -107,7 +106,7 @@
       ],
       "works": [
         {
-          "image": "",
+          "image": "images/1793196950588-793300882.jpg",
           "title": "韩式卷发"
         },
         {
@@ -118,7 +117,8 @@
           "image": "",
           "title": "锁骨层次剪"
         }
-      ]
+      ],
+      "photo": "images/1793196936020-850343572.jpg"
     },
     {
       "id": 3,
@@ -133,7 +133,6 @@
       "priceFrom": 128,
       "desc": "十余年经验，创意染发与受损修护专长。",
       "phone": "138-0000-0003",
-      "photo": "",
       "priceList": [
         {
           "name": "剪发（洗剪吹）",
@@ -188,19 +187,19 @@
       "id": 1,
       "category": "剪发",
       "title": "日系空气短发",
-      "image": ""
+      "image": "images/1793196960141-399125630.jpg"
     },
     {
       "id": 2,
       "category": "染发",
       "title": "奶茶灰棕",
-      "image": ""
+      "image": "images/1793196962493-23028095.jpg"
     },
     {
       "id": 3,
       "category": "造型",
       "title": "男士油头",
-      "image": ""
+      "image": "images/1793196968349-981469702.jpg"
     },
     {
       "id": 4,
@@ -223,12 +222,12 @@
   ],
   "slides": [
     {
-      "image": "",
-      "title": "精选发型"
+      "image": "images/1793196974224-381439641.jpg",
+      "title": "推荐洗发水"
     },
     {
-      "image": "",
-      "title": "烫染作品"
+      "image": "images/1793196988945-402154682.jpg",
+      "title": "恭喜阿全老师获冠军"
     },
     {
       "image": "",
