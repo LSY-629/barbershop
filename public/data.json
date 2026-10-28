@@ -223,15 +223,21 @@
   "slides": [
     {
       "image": "images/1793196974224-381439641.jpg",
-      "title": "推荐洗发水"
+      "title": "推荐洗发水",
+      "color": "#ffffff",
+      "font": ""
     },
     {
       "image": "images/1793196988945-402154682.jpg",
-      "title": "恭喜阿全老师获冠军"
+      "title": "恭喜阿全老师获冠军",
+      "color": "#ffffff",
+      "font": ""
     },
     {
       "image": "",
-      "title": "造型设计"
+      "title": "造型设计",
+      "color": "#ffffff",
+      "font": ""
     }
   ]
 }

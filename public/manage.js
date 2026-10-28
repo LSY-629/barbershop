@@ -141,6 +141,18 @@ function imageField(container, labelText, get, set) {
   return input;
 }
 
+function colorField(container, labelText, get, set) {
+  const wrap = el('label', 'field');
+  wrap.appendChild(el('span', 'field-label', labelText));
+  const input = el('input');
+  input.type = 'color';
+  input.value = get() || '#ffffff';
+  input.addEventListener('input', function () { set(input.value); });
+  wrap.appendChild(input);
+  container.appendChild(wrap);
+  return input;
+}
+
 function addBtn(container, text, onClick) {
   const b = el('button', 'add-btn', text);
   b.addEventListener('click', onClick);
@@ -294,13 +306,15 @@ function renderSlides() {
     const row = el('div', 'row works-row');
     imageField(row, '图片', function () { return s.image; }, function (v) { s.image = v; });
     field(row, '标题', function () { return s.title; }, function (v) { s.title = v; });
+    colorField(row, '标题颜色', function () { return s.color; }, function (v) { s.color = v; });
+    field(row, '标题字体', function () { return s.font; }, function (v) { s.font = v; });
     const del = el('button', 'del-btn', '删');
     del.addEventListener('click', function () { site.slides.splice(i, 1); renderEditor(); });
     row.appendChild(del);
     sec.appendChild(row);
   });
   addBtn(sec, '+ 添加轮播图', function () {
-    site.slides.push({ image: '', title: '' });
+    site.slides.push({ image: '', title: '', color: '#ffffff', font: '' });
     renderEditor();
   });
   editor.appendChild(sec);

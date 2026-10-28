@@ -258,7 +258,10 @@ function render(site) {
     } else {
       slide.appendChild(createEl('div', 'slide-emoji', '💇'));
     }
-    slide.appendChild(createEl('div', 'slide-caption', s.title || ''));
+    const caption = createEl('div', 'slide-caption', s.title || '');
+    if (s.color) caption.style.color = s.color;
+    if (s.font) caption.style.fontFamily = s.font;
+    slide.appendChild(caption);
     track.appendChild(slide);
 
     const dot = createEl('div', 'dot' + (i === 0 ? ' dot-active' : ''));
